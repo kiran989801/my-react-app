@@ -1,15 +1,27 @@
-import Header from "./components/Header"
-import StudentCard from "./components/StudentCard"
+import Header from "./components/Header";
+import StudentCard from "./components/StudentCard";
+import Counter from "./components/Counter";
 
 function App() {
   return (
     <div>
-      <h1>My First React App</h1>
-      <p>Welcome to Full Stack Development.</p>
+      <Header />
+
+      <StudentCard
+        name="Kiran"
+        course="BCA"
+        marks="76%"
+      />
+
+      <StudentCard
+        name="Hema"
+        course="BCA"
+        marks="82%"
+      />
+
+      <Counter />
     </div>
   );
 }
 
 export default App;
-
-
