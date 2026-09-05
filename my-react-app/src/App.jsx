@@ -1,26 +1,23 @@
-import Header from "./components/Header";
-import StudentCard from "./components/StudentCard";
-import Counter from "./components/Counter";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <div>
-      <Header />
+    <BrowserRouter>
+      <nav>
+        <Link to="/">Home</Link> |{" "}
+        <Link to="/about">About</Link> |{" "}
+        <Link to="/contact">Contact</Link>
+      </nav>
 
-      <StudentCard
-        name="Kiran"
-        course="BCA"
-        marks="76%"
-      />
-
-      <StudentCard
-        name="Hema"
-        course="BCA"
-        marks="82%"
-      />
-
-      <Counter />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
